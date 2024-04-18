@@ -1,4 +1,4 @@
-import pygraphviz as pgv
+# import pygraphviz as pgv
 
 from RCPSP_modeling.rcpsp_base import RcpspBase
 
@@ -21,7 +21,7 @@ class PlaceTimePetriNetTransition:
         self.name = name
         self.arcs_in = arcs_in
         self.arcs_out = arcs_out
-        self.net = pgv.AGraph(directed=True)
+        #self.net = pgv.AGraph(directed=True)
 
     def is_available(self, marking):
         return all(
@@ -44,7 +44,7 @@ class PlaceTimePetriNetPlace:
 
 class RcpspPlaceTimePetriNet:
     def __init__(self, rcpsp_basic: RcpspBase):
-        self.net = pgv.AGraph(directed=True)
+        #self.net = pgv.AGraph(directed=True)
         self.transitions = []
         self.places = []
         # for nuw we assume that the activities sorted in a way that if for every i,
